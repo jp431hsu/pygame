@@ -27,6 +27,7 @@ SELECTION = []
 SELECTION.append('player.png')
 SELECTION.append('tofu.png')
 SELECTION.append('chips.png')
+SELECTION.append('github.png')
 
 
 #playerImg = pygame.image.load('player.png')
@@ -143,11 +144,15 @@ while running and pngFiles:
                 pngFiles = False
             if event.key == pygame.K_2:   #key 2
                 ship = 1
-                playerImg = pygame.image.load(SELECTION[ship]) #first index of selection list
+                playerImg = pygame.image.load(SELECTION[ship]) #second index of selection list
                 pngFiles = False
             if event.key == pygame.K_3:   #key 3
                 ship = 2
-                playerImg = pygame.image.load(SELECTION[ship]) #first index of selection list
+                playerImg = pygame.image.load(SELECTION[ship]) #third index of selection list
+                pngFiles = False   
+            if event.key == pygame.K_4:   #key 4
+                ship = 3
+                playerImg = pygame.image.load(SELECTION[ship]) #fourth index of selection list
                 pngFiles = False      
     spacer = 1
     for shipOption in SELECTION:
@@ -155,7 +160,7 @@ while running and pngFiles:
         spacer += 120  
 
      #code for ship selection text
-    shipSelectionText = ["PICK", "1", "2", "3"]
+    shipSelectionText = ["PICK", "1", "2", "3", "4"]
     ssLabel = []
 
     for word in shipSelectionText:
