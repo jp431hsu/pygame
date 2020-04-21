@@ -23,7 +23,13 @@ icon = pygame.image.load('ufo.png')
 pygame.display.set_icon(icon)
 
 # Player
-playerImg = pygame.image.load('player.png')
+SELECTION = []
+SELECTION.append('player.png')
+SELECTION.append('tofu.png')
+SELECTION.append('chips.png')
+
+
+#playerImg = pygame.image.load('player.png')
 playerX = 370
 playerY = 480
 playerX_change = 0
@@ -116,7 +122,52 @@ def isCollision(enemyX, enemyY, bulletX, bulletY):
 
 paused = False    # added for pause
 # Game Loop
+pngFiles = True
+paused = False
 running = True
+
+while running and pngFiles:
+    # RGB = Red, Green, Blue
+    screen.fill((0, 0, 0))
+    # Background Image
+    screen.blit(background, (0, 0))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+        # if keystroke is pressed check whether its right or left
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_1:  #key 1
+                ship = 0
+                playerImg = pygame.image.load(SELECTION[ship]) #first index of selection list
+                pngFiles = False
+            if event.key == pygame.K_2:   #key 2
+                ship = 1
+                playerImg = pygame.image.load(SELECTION[ship]) #first index of selection list
+                pngFiles = False
+            if event.key == pygame.K_3:   #key 3
+                ship = 2
+                playerImg = pygame.image.load(SELECTION[ship]) #first index of selection list
+                pngFiles = False      
+    spacer = 1
+    for shipOption in SELECTION:
+        screen.blit( pygame.image.load(shipOption), ( 450, (150+spacer)))
+        spacer += 120  
+
+     #code for ship selection text
+    shipSelectionText = ["PICK", "1", "2", "3"]
+    ssLabel = []
+
+    for word in shipSelectionText:
+        ssLabel.append(over_font.render(word, True, (255,255,255)))
+    
+    textSpacer = -120
+    for word in ssLabel:
+        screen.blit(word, (135, (150 + textSpacer)))
+        textSpacer += 120  
+
+    pygame.display.update()          
+                
 while running:
 
     # RGB = Red, Green, Blue
