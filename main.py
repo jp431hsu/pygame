@@ -221,9 +221,9 @@ while running:
         playerX = 736
     playerY += playerY_change      #added for up and down
 #playerY += playerY_change
-    if playerY <= 0:
+    if playerY <= 0:     #north boundary
         playerY = 0
-    elif playerY >= 500:
+    elif playerY >= 500:     #south boundary
         playerY = 500
     # Enemy Movement
     if not paused:   #added for pause
