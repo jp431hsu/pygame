@@ -189,8 +189,8 @@ while running:
               paused = True                      #added for pause
             if event.key == pygame.K_u:  # Unpausing  added for pause
               paused = False                    #added for pause
-#            if event.key == pygame.K_p:           #added for pause
-#                paused = not paused             #added for pause
+            if event.key == pygame.K_p:           #added for pause
+                paused = not paused             #added for pause
             if event.key == pygame.K_LEFT and paused == False:
                 playerX_change = -5
             if event.key == pygame.K_RIGHT and paused == False:
@@ -220,6 +220,11 @@ while running:
     elif playerX >= 736:
         playerX = 736
     playerY += playerY_change      #added for up and down
+#playerY += playerY_change
+    if playerY <= 305:
+        playerY = 305
+    elif playerY >= 476:
+        playerY = 476
     # Enemy Movement
     if not paused:   #added for pause
         for i in range(num_of_enemies):
