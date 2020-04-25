@@ -1,0 +1,13 @@
+A particular struggle that I overcame when working on this assignment was applying the un-pause aspect of the game. When I thought of the idea to pause, I searched on the Internet for suggestions of how this could be done in pygame. The initial result gave me an idea of how to pause using pygame.K_P, but not how to resume the game. After trying to augment the code to resume, I eventually found a more helpful suggestion on the website stackoverflow, where another person asked for tips on how pause and resume are handled. This led me to learn about pygame.K_u, or un-pause, which proved helpful in applying a functional pause into the game.
+
+An issue I was unable to resolve was trying to get pygame to work on an Apple laptop. The pip install for pygame was not successfully executed, and upon searching for answers on the Internet, several pages suggested that pygame may not work on Apple for certain operating systems. After talking to the professor, one other student was able to install pygame on an Apple laptop, but I switched over to a Windows desktop to start the assignment.
+
+A future student might benefit from advice such as brainstorming ideas that a modern game would have. For example, any professional game would have a pause button, and many would have a player-1 character selection, some would allow the player to move in four directions, etc. These were all ideas not present in main.py, and were successfully implemented after searching for examples.
+
+The most fun aspect of this assignment was researching the logic for applying these changes. I’ve become more familiar with Python after all of the previous assignments, and now I’m at a stage where I can think of improvements, search for examples of how to implement the code, and have a working result. That is a very exciting and rewarding aspect for a programming language that at the beginning of the semester, I did not know anything about. 
+
+The most challenging aspect of the assignment was spacing out the enemy characters. I had looked up examples of how this might be done, but upon applying the knowledge, the result was an unpredictable spacing of enemies in discordant groups.
+
+The most difficult aspect to understand of this assignment was to familiarize with pygame. However, the more I tried to add to it, the more familiar I became with how it works, and how the sound effects, images, and code come together.
+
+Improvements made: pause and resume, player can move up and down, boundaries added to up and down, choose different .png files for main character, spacing enemies, colliding with enemies causes a game over.
